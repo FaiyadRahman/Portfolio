@@ -1,0 +1,105 @@
+import React from "react";
+import "./index.scss";
+import { motion } from "framer-motion";
+import portfolio from "../../../assets/portfolio.jpeg";
+import { FaUser, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+
+const About = () => {
+    const bios = [
+        {
+            id: 1,
+            icon: <FaUser />,
+            key: "Name",
+            value: "Faiyad Rahman",
+        },
+        {
+            id: 2,
+            icon: <FaPhoneAlt />,
+            key: "Phone",
+            value: "(587) 598-2500",
+        },
+        {
+            id: 3,
+            icon: <FaPaperPlane />,
+            key: "Email",
+            value: "faiyad@ualberta.ca",
+        },
+    ];
+    return (
+        <div className="container" id="about">
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ y: [-50, 0], opacity: 1 }}
+                className="title"
+            >
+                <span>Who Am I?</span>
+                <h1>About Me</h1>
+            </motion.div>
+            <div className="parent">
+                <div className="about_container">
+                    <motion.div
+                        initial={{ x: 0, opacity: 0 }}
+                        whileInView={{ x: [-250, 0], opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        className="about_left"
+                    >
+                        <motion.img
+                            src={portfolio}
+                            whileHover={{ y: -48, x: -55 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="about_right"
+                        initial={{ x: 0, opacity: 0 }}
+                        whileInView={{ x: [250, 0], opacity: 1 }}
+                        transition={{ duration: 1 }}
+                    >
+                        <p className="bio_text">
+                            Hi, I'm Faiyad Rahman, a 3rd-year computer science
+                            student at the University of Alberta. My passion
+                            lies in full-stack web development, and I'm always
+                            eager to learn more. I love creating innovative and
+                            user-friendly web applications that provide
+                            exceptional experiences. Over the years, I have
+                            completed several successful projects that showcase
+                            my skills and expertise. I'm constantly growing and
+                            expanding my knowledge, and I'm excited to take on
+                            new challenges and projects.
+                        </p>
+                        <div className="bio_section">
+                            {bios.map((bio) => {
+                                return (
+                                    <div className="bio" key={bio.id}>
+                                        <span className="bioKey">
+                                            <span className="bio_key_icon">
+                                                {bio.icon}
+                                            </span>
+
+                                            {bio.key}
+                                        </span>
+                                        <span className="bioValue">
+                                            {bio.value}
+                                        </span>
+                                    </div>
+                                );
+                            })}
+
+                            <motion.a
+                                href="#"
+                                download=""
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ duration: 0.3 }}
+                                className="resume_button"
+                            >
+                                Download Resume
+                            </motion.a>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default About;
