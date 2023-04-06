@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-    FaHtml5,
-    FaCss3,
-    FaNodeJs,
-    FaReact,
-    FaSass,
-    FaFigma,
-} from "react-icons/fa";
-import { DiJavascript } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
 import "./index.scss";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
 import GeneralProgramming from "./GeneralProgramming";
+import Experience from "./Experience";
 
 const Skills = () => {
     const experiences = [
@@ -88,9 +79,9 @@ const Skills = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ y: [-50, 0], opacity: 1 }}
-                className="experiences"
+                className=""
             >
-                {active === 2 &&
+                {/* {active === 2 &&
                     experiences.map((experience) => {
                         return (
                             <div className="experience" key={experience.id}>
@@ -101,7 +92,11 @@ const Skills = () => {
                                 </div>
                             </div>
                         );
-                    })}
+                    })} */}
+
+                {active === 2 && (
+                        <Experience />
+                )}
             </motion.div>
             <motion.div
                 initial={{ opacity: 0 }}
