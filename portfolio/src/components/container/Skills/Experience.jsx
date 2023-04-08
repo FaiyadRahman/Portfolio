@@ -12,7 +12,7 @@ const Experience = () => {
                         <h4>University of Alberta</h4>
                         <p>
                             Gained strong foundation knowledge in networks, data
-                            structures and algorithms, and design principles.
+                            structures and algorithms, and design principles
                         </p>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const Experience = () => {
                             Led a team of 6 developers to create a Discord bot
                             that notifies students when new internship
                             opportunities are posted online. Helped over 50
-                            students discover 200+ opportunities.
+                            students discover 200+ opportunities
                         </p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ const Experience = () => {
                         <p>
                             Learned strong web development skills with the MERN
                             stack. Developed 14 projects with a focus on
-                            professional best practices.
+                            professional best practices
                         </p>
                     </div>
                 </div>

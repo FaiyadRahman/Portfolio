@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import {
     FaHtml5,
     FaCss3,
@@ -14,7 +14,8 @@ const Frontend = () => {
             className="skills_content"
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: [250, 0], opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
+
         >
             <h3 className="skills_title">Frontend</h3>
 
