@@ -1,6 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import { motion, useAnimate, useInView } from "framer-motion";
 import "./index.scss";
-import { motion } from "framer-motion";
 import portfolio from "../../../assets/portfolio.jpeg";
 import { FaUser, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
 
@@ -25,13 +26,23 @@ const About = () => {
             value: "faiyad@ualberta.ca",
         },
     ];
+
+    const [scope, animate] = useAnimate();
+    const isInView = useInView(scope);
+
+    useEffect(() => {
+        if (isInView) {
+            animate(
+                scope.current,
+                { opacity: [0, 1], y: [-50, 0] },
+                { duration: 1 }
+            );
+        }
+    }, [isInView]);
+
     return (
         <div className="container" id="about">
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ y: [-50, 0], opacity: 1 }}
-                className="title"
-            >
+            <motion.div ref={scope} className="title">
                 <span>Who Am I?</span>
                 <h1>About Me</h1>
             </motion.div>

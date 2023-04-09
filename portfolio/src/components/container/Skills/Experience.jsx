@@ -1,13 +1,53 @@
-import { AiOutlineCalendar } from "react-icons/ai";
+import { useEffect } from "react";
+import { motion, useAnimate, useInView, stagger } from "framer-motion";
 
 const Experience = () => {
+    const [scope1, animate1] = useAnimate();
+    const isInView1 = useInView(scope1);
+
+    const [scope2, animate2] = useAnimate();
+    const isInView2 = useInView(scope2);
+
+    const [scope3, animate3] = useAnimate();
+    const isInView3 = useInView(scope3);
+
+    useEffect(() => {
+        if (isInView1) {
+            animate1(
+                scope1.current,
+                { opacity: [0, 1]},
+                { duration: 1.5 }
+            );
+        }
+    }, [isInView1]);
+
+    useEffect(() => {
+        if (isInView2) {
+            animate2(
+                scope2.current,
+                { opacity: [0, 1] },
+                { duration: 1 }
+            );
+        }
+    }, [isInView2]);
+
+    useEffect(() => {
+        if (isInView3) {
+            animate3(
+                scope3.current,
+                { opacity: [0, 1] },
+                { duration: 1 }
+            );
+        }
+    }, [isInView3]);
+
     return (
         <div className="timeline-section">
-            <div class="timeline-items">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date"> Sept 2020 - present</div>
-                    <div class="timeline-content">
+            <div ref={scope1} className="timeline-items">
+                <div className="timeline-item">
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-date"> Sept 2020 - present</div>
+                    <div className="timeline-content">
                         <h3>BSc. in Computer Science</h3>
                         <h4>University of Alberta</h4>
                         <p>
@@ -16,10 +56,10 @@ const Experience = () => {
                         </p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Sept 2021 - Apr 2022</div>
-                    <div class="timeline-content">
+                <div ref={scope2} className="timeline-item">
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-date">Sept 2021 - Apr 2022</div>
+                    <div className="timeline-content">
                         <h3>Software Developer</h3>
                         <h4>Google Developer Student Club</h4>
                         <p>
@@ -30,10 +70,10 @@ const Experience = () => {
                         </p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jan - Mar 2023</div>
-                    <div class="timeline-content">
+                <div ref={scope3} className="timeline-item">
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-date">Jan - Mar 2023</div>
+                    <div className="timeline-content">
                         <h3>The Complete 2023 Web Development Bootcamp</h3>
                         <h4>Udemy</h4>
                         <p>

@@ -7,9 +7,6 @@ const Frontend = () => {
     return (
         <motion.div
             className="skills_content"
-            initial={{ x: 0, opacity: 0 }}
-            whileInView={{ x: [250, 0], opacity: 1 }}
-            transition={{ duration: 1 }}
         >
             <h3 className="skills_title">Backend</h3>
 

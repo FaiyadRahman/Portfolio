@@ -12,10 +12,6 @@ const Frontend = () => {
     return (
         <motion.div
             className="skills_content"
-            initial={{ x: 0, opacity: 0 }}
-            whileInView={{ x: [250, 0], opacity: 1 }}
-            transition={{ duration: 2 }}
-
         >
             <h3 className="skills_title">Frontend</h3>
 
@@ -39,7 +35,7 @@ const Frontend = () => {
                     </div>
                     <div className="skills_data">
                         <div className="skills_icon">
-                            <FaReact/>
+                            <FaReact />
                         </div>
                         <div>
                             <h3 className="skills_name">React</h3>
