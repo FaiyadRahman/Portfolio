@@ -33,7 +33,7 @@ const Home = () => {
                 <h3 className="name">
                     Hi, I'm <span>Faiyad Rahman</span>{" "}
                 </h3>
-                <span className="job">Full-Stack Developer Based in Canada</span>
+                <span className="job">Full-Stack Developer</span>
                 <span className="text">
                     Passionate
                     <br /> to craft innovative <br /> web products.
