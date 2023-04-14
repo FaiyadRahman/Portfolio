@@ -45,7 +45,7 @@ const Portfolio = () => {
             category: "Back-End",
             title: "Secrets",
             description:
-                "A social media app that allows users to share their secrets annonymously",
+                "A social media app that allows users to share their secrets anonymously",
             github: "https://github.com/FaiyadRahman/Secrets",
             link: "https://secrets-oeso.onrender.com",
         },
