@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { motion, useAnimate, useInView } from "framer-motion";
 import "./index.scss";
 import portfolio from "../../../assets/portfolio.jpeg";
+import resume from "../../../assets/Faiyad_Rahman_Resume_2023.pdf";
 import { FaUser, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
 
 const About = () => {
@@ -67,16 +68,15 @@ const About = () => {
                         transition={{ duration: 1 }}
                     >
                         <p className="bio_text">
-                            Hi, I'm Faiyad Rahman, a 3rd-year computer science
+                            Hi! I'm Faiyad Rahman, a 3rd-year Computer Science
                             student at the University of Alberta. My passion
-                            lies in full-stack web development, and I'm always
-                            eager to learn more. I love creating innovative and
-                            user-friendly web applications that provide
-                            exceptional experiences. Over the years, I have
-                            completed several successful projects that showcase
-                            my skills and expertise. I'm constantly growing and
-                            expanding my knowledge, and I'm excited to take on
-                            new challenges and projects.
+                            lies in full-stack web development, and I love
+                            creating innovative and user-friendly web
+                            applications that provide exceptional experiences.
+                            Over the years, I have completed several successful
+                            projects that showcase my skills and expertise. I'm
+                            constantly growing and expanding my knowledge, and
+                            I'm excited to take on new challenges and projects.
                         </p>
                         <div className="bio_section">
                             {bios.map((bio) => {
@@ -97,8 +97,8 @@ const About = () => {
                             })}
 
                             <motion.a
-                                href="#"
-                                download=""
+                                href={resume}
+                                target="_blank"
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.3 }}
                                 className="resume_button"

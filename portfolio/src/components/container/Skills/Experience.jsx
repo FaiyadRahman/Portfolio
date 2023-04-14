@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { motion, useAnimate, useInView, stagger } from "framer-motion";
+import { useAnimate, useInView, stagger } from "framer-motion";
 
 const Experience = () => {
     const [scope1, animate1] = useAnimate();

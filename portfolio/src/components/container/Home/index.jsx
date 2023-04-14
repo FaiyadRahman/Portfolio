@@ -1,16 +1,18 @@
 import React from "react";
-import portfolio from "../../../assets/portfolio.jpeg";
+import portfolio from "../../../assets/faiyad-memoji.jpg";
 import "./index.scss";
 import { motion } from "framer-motion";
 
 const Home = () => {
+
+
+    
     const moveVariants = {
         animation: {
-            y: [0, -15],
+            y: [0, 15,0],
             transition: {
-                yoyo: Infinity,
-                duration: 2,
-                delay: 1,
+                duration: 4,
+                repeat: Infinity,
             },
         },
     };
@@ -42,13 +44,14 @@ const Home = () => {
                     href="#contact"
                     whileHover={{ scale: 1.1 }}
                     variants={moveVariants}
+                    transition={{ duration: 0.3 }}
                     animate="animation"
                 >
                     connect with me
                 </motion.a>
-                <div className="web">Front-end</div>
+                <div className="front-end">Front-End</div>
                 <div className="ui">UI/UX Designer</div>
-                <div className="freelance">Back-end</div>
+                <div className="back-end">Back-End</div>
             </div>
         </motion.div>
     );

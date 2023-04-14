@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiGithub, FiEye } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { motion, useAnimate, useInView } from "framer-motion";
 import estately from "../../../assets/estately.png";
 import chatGPT from "../../../assets/chatapp.png";
 import adminDashboard from "../../../assets/dashboard.png";
@@ -57,6 +57,32 @@ const Portfolio = () => {
     const [works, setWorks] = useState([]);
     const [active, setActive] = useState(0);
 
+    const [scope, animate] = useAnimate();
+    const isInView = useInView(scope);
+
+    const [scopeButton, animateButton] = useAnimate();
+    const ButtonInView = useInView(scopeButton);
+
+    useEffect(() => {
+        if (ButtonInView) {
+            animateButton(
+                scopeButton.current,
+                { opacity: [0, 1], y: [-50, 0] },
+                { duration: 1 }
+            );
+        }
+    }, [ButtonInView]);
+
+    useEffect(() => {
+        if (isInView) {
+            animate(
+                scope.current,
+                { opacity: [0, 1], y: [-50, 0] },
+                { duration: 1 }
+            );
+        }
+    }, [isInView]);
+
     useEffect(() => {
         if (tab.name === "all") {
             setWorks(workImages);
@@ -75,19 +101,11 @@ const Portfolio = () => {
 
     return (
         <div className="container" id="portfolio">
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ y: [-50, 0], opacity: 1 }}
-                className="title"
-            >
+            <motion.div ref={scope} className="title">
                 <span>My Work</span>
                 <h1>Awesome Projects</h1>
             </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ y: [-50, 0], opacity: 1 }}
-                className="buttons"
-            >
+            <motion.div ref={scopeButton} className="buttons">
                 {workNavs.map((workNav, index) => {
                     return (
                         <button
@@ -153,7 +171,6 @@ const Portfolio = () => {
                     );
                 })}
             </motion.div>
-            
         </div>
     );
 };

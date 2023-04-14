@@ -1,13 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaDribbble, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { GrMail} from "react-icons/gr";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import "./index.scss";
 
 const Navbar = () => {
     const navLinks = ["home", "about", "skills", "portfolio", "contact"];
-    const socialIcons = [<FaDribbble />, <FaInstagram />, <FaLinkedin />];
+    const socialIcons = [
+        { icon: <GrMail />, link: "mailto:faiyad@ualberta.ca" },
+        { icon: <FaLinkedin />, link: "https://linkedin.com/in/faiyad" },
+        { icon: <AiFillGithub />, link: "https://github.com/FaiyadRahman" },
+    ];;
 
     const [scroll, setScroll] = useState(false);
     const [toggle, setToggle] = useState(false);
@@ -52,7 +58,7 @@ const Navbar = () => {
         >
             <div className="Nav_container">
                 <div className="logo">
-                    <h3>F</h3>
+                    <h3>FR</h3>
                 </div>
                 <ul className="nav_links">
                     {navLinks.map((navlink, index) => {
@@ -67,8 +73,8 @@ const Navbar = () => {
                     {socialIcons.map((socialIcon, index) => {
                         return (
                             <div key={index}>
-                                <a href="https://google.ca" target="_blank">
-                                    {socialIcon}
+                                <a href={socialIcon.link} target="_blank">
+                                    {socialIcon.icon}
                                 </a>{" "}
                             </div>
                         );
