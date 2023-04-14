@@ -59,6 +59,7 @@ const About = () => {
                             src={portfolio}
                             whileHover={{ y: -48, x: -55 }}
                             transition={{ duration: 0.3 }}
+                            alt="portfolio-img"
                         />
                     </motion.div>
                     <motion.div
