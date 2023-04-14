@@ -93,21 +93,33 @@ const Contact = () => {
                     className="contact_right"
                 >
                     <h3>Get In Touch</h3>
-                    <form method="POST" data-netlify="true" name="contact">
+                    <form method="POST" name="contact" action="/contact">
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value={"contact"}
+                        />
                         <div className="row">
-                            <input name="name" type="text" placeholder="name" />
+                            <input
+                                name="name"
+                                type="text"
+                                placeholder="name"
+                                required
+                            />
                         </div>
                         <div className="row">
                             <input
                                 name="email"
                                 type="email"
                                 placeholder="email"
+                                required
                             />
                         </div>
                         <div className="row">
                             <textarea
                                 name="message"
                                 placeholder="message"
+                                required
                             ></textarea>
                         </div>
 
