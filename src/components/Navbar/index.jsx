@@ -8,7 +8,7 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import "./index.scss";
 
 const Navbar = () => {
-    const navLinks = ["home", "about", "skills", "portfolio", "contact"];
+    const navLinks = ["home", "about", "skills", "experience", "portfolio", "contact"];
     const socialIcons = [
         { icon: <GrMail />, link: "mailto:faiyad@ualberta.ca" },
         { icon: <FaLinkedin />, link: "https://linkedin.com/in/faiyad" },

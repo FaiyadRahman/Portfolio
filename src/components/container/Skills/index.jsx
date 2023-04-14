@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
 import "./index.scss";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
 import GeneralProgramming from "./GeneralProgramming";
-import Experience from "./Experience";
 
 const Skills = () => {
     const finishes = [
@@ -24,8 +23,6 @@ const Skills = () => {
             itemName: "Teams Managed",
         },
     ];
-
-    const [active, setActive] = useState(1);
 
     const [scopeTitle, animate] = useAnimate();
     const isInView = useInView(scopeTitle);
@@ -58,7 +55,7 @@ const Skills = () => {
             );
         }
     }, [ButtonInView]);
-    
+
     useEffect(() => {
         if (FinishesInView) {
             animateFinishes(
@@ -82,46 +79,28 @@ const Skills = () => {
     return (
         <div className="container" id="skills">
             <motion.div ref={scopeTitle} className="title">
-                <span>My Technical skills</span>
-                <h1>Skills And Experience</h1>
+                <span>What I am Good at</span>
+                <h1>Tchnical Skills</h1>
             </motion.div>
-            <motion.div ref={scopeButton} className="select">
-                <button
-                    onClick={() => setActive(1)}
-                    className={active === 1 ? "active" : ""}
-                >
-                    Skills
-                </button>
-                <button
-                    onClick={() => setActive(2)}
-                    className={active === 2 ? "active" : ""}
-                >
-                    Experiences
-                </button>
-            </motion.div>
+
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ y: [-50, 0], opacity: 1 }}
             >
-                {active === 1 && (
-                    <div ref={scopeCards} className="skills_container">
-                        <Frontend />
-                        <Backend />
-                        <GeneralProgramming />
-                    </div>
-                )}
+                <div ref={scopeCards} className="skills_container">
+                    <Frontend />
+                    <Backend />
+                    <GeneralProgramming />
+                </div>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ y: [-50, 0], opacity: 1 }}
                 className=""
             >
-                {active === 2 && <Experience />}
+
             </motion.div>
-            <motion.div
-                ref={scopeFinishes}
-                className="finishes_container"
-            >
+            <motion.div ref={scopeFinishes} className="finishes_container">
                 {finishes.map((finish) => {
                     return (
                         <div className="finishes" key={finish.id}>

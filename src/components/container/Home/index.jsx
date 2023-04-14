@@ -1,5 +1,5 @@
 import React from "react";
-import portfolio from "../../../assets/faiyad-memoji.jpg";
+import portfolio from "../../../assets/faiyad-memoji.png";
 import "./index.scss";
 import { motion } from "framer-motion";
 
