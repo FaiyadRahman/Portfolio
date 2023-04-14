@@ -109,10 +109,14 @@
             width: 4.2rem;
             cursor: pointer;
         }
-        a {
+        .styled-button {
+            font-family: "Poppins", sans-serif;
             text-decoration: none;
+            background: transparent;
             color: #fff;
             text-transform: capitalize;
+            border: none;
+            cursor: pointer;
         }
     }
 }

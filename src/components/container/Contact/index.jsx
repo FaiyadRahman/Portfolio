@@ -93,7 +93,7 @@ const Contact = () => {
                     className="contact_right"
                 >
                     <h3>Get In Touch</h3>
-                    <form action="POST" data-netlify="true">
+                    <form method="POST" data-netlify="true" name="contact">
                         <div className="row">
                             <input name="name" type="text" placeholder="name" />
                         </div>
@@ -110,14 +110,17 @@ const Contact = () => {
                                 placeholder="message"
                             ></textarea>
                         </div>
+
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                            className="btn"
+                        >
+                            <button type="submit" class="styled-button">
+                                Send
+                            </button>
+                        </motion.div>
                     </form>
-                    <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                        className="btn"
-                    >
-                        <a type="submit">Send</a>
-                    </motion.div>
                 </motion.div>
             </div>
         </div>
