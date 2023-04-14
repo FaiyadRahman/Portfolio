@@ -4,12 +4,9 @@ import "./index.scss";
 import { motion } from "framer-motion";
 
 const Home = () => {
-
-
-    
     const moveVariants = {
         animation: {
-            y: [0, 15,0],
+            y: [0, 15, 0],
             transition: {
                 duration: 4,
                 repeat: Infinity,
@@ -38,7 +35,7 @@ const Home = () => {
                 <span className="job">Full-Stack Developer</span>
                 <span className="text">
                     Passionate
-                    <br /> to craft innovative <br /> web products.
+                    <br /> to craft innovative <br /> web products
                 </span>
                 <motion.a
                     href="#contact"

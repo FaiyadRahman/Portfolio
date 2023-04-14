@@ -46,7 +46,7 @@ const Experience = () => {
             <div ref={scope1} className="timeline-items">
                 <div className="timeline-item">
                     <div className="timeline-dot"></div>
-                    <div className="timeline-date"> Sept 2020 - present</div>
+                    <div className="timeline-date"> Sept. 2020 - Present</div>
                     <div className="timeline-content">
                         <h3>BSc. in Computer Science</h3>
                         <h4>University of Alberta</h4>
@@ -58,7 +58,7 @@ const Experience = () => {
                 </div>
                 <div ref={scope2} className="timeline-item">
                     <div className="timeline-dot"></div>
-                    <div className="timeline-date">Sept 2021 - Apr 2022</div>
+                    <div className="timeline-date">Sept. 2021 - Apr. 2022</div>
                     <div className="timeline-content">
                         <h3>Software Developer</h3>
                         <h4>Google Developer Student Club</h4>
@@ -72,7 +72,7 @@ const Experience = () => {
                 </div>
                 <div ref={scope3} className="timeline-item">
                     <div className="timeline-dot"></div>
-                    <div className="timeline-date">Jan - Mar 2023</div>
+                    <div className="timeline-date">Dec. 2022 - Jan. 2023</div>
                     <div className="timeline-content">
                         <h3>The Complete 2023 Web Development Bootcamp</h3>
                         <h4>Udemy</h4>
