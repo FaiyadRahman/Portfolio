@@ -104,7 +104,7 @@ const About = () => {
                                 transition={{ duration: 0.3 }}
                                 className="resume_button"
                             >
-                                Download Resume
+                                View Resume
                             </motion.a>
                         </div>
                     </motion.div>

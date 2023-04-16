@@ -80,7 +80,7 @@ const Skills = () => {
         <div className="container" id="skills">
             <motion.div ref={scopeTitle} className="title">
                 <span>What I am Good at</span>
-                <h1>Tchnical Skills</h1>
+                <h1>Technical Skills</h1>
             </motion.div>
 
             <motion.div
@@ -97,9 +97,7 @@ const Skills = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ y: [-50, 0], opacity: 1 }}
                 className=""
-            >
-
-            </motion.div>
+            ></motion.div>
             <motion.div ref={scopeFinishes} className="finishes_container">
                 {finishes.map((finish) => {
                     return (
